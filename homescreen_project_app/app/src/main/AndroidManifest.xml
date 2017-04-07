@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".aboutScreen"></activity>
+        <activity
+            android:name=".aboutScreen"
+            android:parentActivityName=".homescreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dymos.homescreen_project_app.homescreen" />
+        </activity>
     </application>
 
 </manifest>

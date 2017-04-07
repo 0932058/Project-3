@@ -15,21 +15,18 @@ import java.util.Timer;
 
 public class homescreen extends AppCompatActivity {
 
-    Button exitBtn;
+    Button aboutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homescreen);
 
-        exitBtn = (Button) findViewById(R.id.exitBtn);
-        exitBtn.setOnClickListener(new View.OnClickListener() {
+        aboutBtn = (Button) findViewById(R.id.aboutBtn);
+        aboutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(homescreen.this, aboutScreen.class));
-                finish();
-                System.exit(0);
-
             }
         });
     }
