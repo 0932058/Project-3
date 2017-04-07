@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.sql.Time;
 import java.sql.Timestamp;
@@ -25,6 +26,7 @@ public class homescreen extends AppCompatActivity {
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(homescreen.this, aboutScreen.class));
                 finish();
                 System.exit(0);
 
