@@ -16,45 +16,61 @@
         android:textSize="50sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.008" />
 
     <Button
         android:id="@+id/exitBtn"
-        android:layout_width="180dp"
-        android:layout_height="75dp"
+        android:layout_width="226dp"
+        android:layout_height="107dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="413dp"
         android:text="Exit"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aboutBtn"
-        app:layout_constraintVertical_bias="0.396" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503" />
 
     <Button
         android:id="@+id/aboutBtn"
-        android:layout_width="180dp"
-        android:layout_height="75dp"
-        android:text="about"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="280dp" />
-
-    <Button
-        android:id="@+id/searchBtn"
-        android:layout_width="180dp"
-        android:layout_height="75dp"
+        android:layout_width="226dp"
+        android:layout_height="107dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:text="start searching"
-        app:layout_constraintBottom_toTopOf="@+id/aboutBtn"
+        android:text="about"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topTxt"
-        app:layout_constraintVertical_bias="0.487" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="226dp"
+        android:layout_height="107dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="132dp"
+        android:text="start searching"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036"
+        tools:layout_editor_absoluteY="110dp" />
 </android.support.constraint.ConstraintLayout>
