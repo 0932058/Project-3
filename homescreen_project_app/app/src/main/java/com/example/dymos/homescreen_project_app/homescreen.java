@@ -16,17 +16,28 @@ import java.util.Timer;
 public class homescreen extends AppCompatActivity {
 
     Button aboutBtn;
+    Button exitBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homescreen);
+        setTitle("De Rotterdam criminaliteit app");
 
         aboutBtn = (Button) findViewById(R.id.aboutBtn);
         aboutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(homescreen.this, aboutScreen.class));
+            }
+        });
+
+        exitBtn = (Button) findViewById(R.id.exitBtn);
+        exitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
             }
         });
     }
