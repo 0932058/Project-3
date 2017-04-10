@@ -36,13 +36,6 @@ public class search_results extends AppCompatActivity {
             theDates.add("Regio" + region);
         }
 
-        /*barEntries.add(new BarEntry(44f, 0));
-        barEntries.add(new BarEntry(23f, 1));
-        barEntries.add(new BarEntry(38f, 2));
-        barEntries.add(new BarEntry(34f, 3));
-        barEntries.add(new BarEntry(14f, 4));
-        barEntries.add(new BarEntry(24f, 5));*/
-
         BarDataSet barDataSet = new BarDataSet(barEntries,"Dates");
 
         BarData theData = new BarData(theDates,barDataSet);
