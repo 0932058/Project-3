@@ -7,7 +7,6 @@ import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -30,19 +29,17 @@ public class search_results extends AppCompatActivity {
 
         for(int i = 0; i < 7; i++){
             float n = rand.nextInt(50);
-
             barEntries.add(new BarEntry(n,i));
             String region = Float.toString(i);
             theDates.add("Regio" + region);
         }
 
         BarDataSet barDataSet = new BarDataSet(barEntries,"Dates");
-
         BarData theData = new BarData(theDates,barDataSet);
+
         barChart.setData(theData);
         barChart.setTouchEnabled(true);
         barChart.setDragEnabled(true);
         barChart.setScaleEnabled(true);
-
     }
 }
