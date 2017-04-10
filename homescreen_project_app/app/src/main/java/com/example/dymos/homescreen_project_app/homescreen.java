@@ -15,8 +15,9 @@ import java.util.Timer;
 
 public class homescreen extends AppCompatActivity {
 
-    Button aboutBtn;
-    Button exitBtn;
+    Button nextBtn;     //making the start searching button
+    Button aboutBtn;    //making the about button
+    Button exitBtn;     //making the exit button
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,16 @@ public class homescreen extends AppCompatActivity {
         setContentView(R.layout.activity_homescreen);
         setTitle("De Rotterdam criminaliteit app");
 
+        //code for the "start searching" button
+        nextBtn = (Button) findViewById(R.id.searchBtn);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(homescreen.this, select_region.class));
+            }
+        });
+
+        //code for the "about" button
         aboutBtn = (Button) findViewById(R.id.aboutBtn);
         aboutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +43,7 @@ public class homescreen extends AppCompatActivity {
             }
         });
 
+        //code for the "exit" button
         exitBtn = (Button) findViewById(R.id.exitBtn);
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
