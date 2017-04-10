@@ -23,7 +23,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dymos.homescreen_project_app.homescreen" />
         </activity>
-        <activity android:name=".select_region" />
+        <activity
+            android:name=".select_region"
+            android:parentActivityName=".homescreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dymos.homescreen_project_app.homescreen" />
+        </activity>
         <activity android:name=".select_year" />
         <activity android:name=".search_results"></activity>
     </application>
