@@ -35,12 +35,13 @@ public class search_results extends AppCompatActivity {
         BarDataSet barDataSet = new BarDataSet(barEntries,"Dates");
 
         ArrayList<String> theDates = new ArrayList<>();
-        theDates.add("January");
+        /*theDates.add("January");
         theDates.add("Febraury");
         theDates.add("March");
         theDates.add("April");
         theDates.add("May");
         theDates.add("June");
+        */
 
         BarData theData = new BarData(theDates,barDataSet);
         barChart.setData(theData);
