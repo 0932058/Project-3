@@ -45,8 +45,6 @@ public class search_results extends AppCompatActivity {
 
         BarDataSet barDataSet = new BarDataSet(barEntries,"Dates");
 
-
-
         BarData theData = new BarData(theDates,barDataSet);
         barChart.setData(theData);
         barChart.setTouchEnabled(true);
