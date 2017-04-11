@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal" />
 
         <View
-            android:background="#"
+            android:background="#000000"
             android:id="@+id/separator1"
             android:layout_width = "match_parent"
             android:layout_height="1dp"
