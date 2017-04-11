@@ -15,6 +15,8 @@ public class select_year extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_year);
 
+
+
         setTitle("selecteer het jaar/de jaren");
 
         //code for the year button

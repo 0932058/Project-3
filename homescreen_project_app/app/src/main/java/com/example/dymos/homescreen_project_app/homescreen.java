@@ -15,15 +15,27 @@ import java.util.Timer;
 
 public class homescreen extends AppCompatActivity {
 
+    public static selectRegion selecting;
+
     Button nextBtn;     //making the start searching button
     Button aboutBtn;    //making the about button
     Button exitBtn;     //making the exit button
+
+    public static selectRegion getSelecting(){
+        return selecting;
+    }
+
+    public static void setSelecting(selectRegion selectingInst){
+        selecting = selectingInst;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homescreen);
         setTitle("De Rotterdam criminaliteit app");
+        selecting = new selectRegion();
+
 
         //code for the "start searching" button
         nextBtn = (Button) findViewById(R.id.searchBtn);
