@@ -4,21 +4,246 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dymos.homescreen_project_app.select_region">
+    tools:context="com.example.dymos.homescreen_project_app.select_region"
+    android:background="@android:color/black">
 
     <Button
-        android:id="@+id/regionBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/nextBtn"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:text="select year"
+        android:background="@android:color/holo_blue_dark"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="NEXT"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:layout_width="392dp"
+        android:layout_height="517dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        tools:layout_editor_absoluteY="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/rozenburgBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Rozenburg"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/centrumBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:elevation="0dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Rotterdam Centrum"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/prinsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:elevation="0dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Prins Alexander"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/pernisBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:elevation="0dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Pernis"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/overschieBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:elevation="0dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Overschie"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/noordBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:elevation="0dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Noord"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/kralingenBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:elevation="0dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Kralingen-Crooswijk"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/ijsselmondeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:elevation="0dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="IJsselmonde"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/hoogvlietBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:elevation="0dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Hoogvliet"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/hoekBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Hoek van Holland"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/hillegersbergBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Hillegersberg-Schiebroek"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/feijenoordBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Feijenoord"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/delfshavenBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Delfshaven"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <Button
+                android:id="@+id/charloisBtn"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="Charlois"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
