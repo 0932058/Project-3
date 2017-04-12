@@ -52,7 +52,6 @@ public class search_results extends AppCompatActivity {
          * Line Graph
          */
         LineChart lineChart = (LineChart) findViewById(R.id.LineChart1);
-            // creating list of entry<br />
             ArrayList<Entry> entries = new ArrayList<>();
             entries.add(new Entry(4f, 0));
             entries.add(new Entry(8f, 1));
@@ -71,8 +70,8 @@ public class search_results extends AppCompatActivity {
 
         LineDataSet dataset = new LineDataSet(entries,"Aantal overvallen");
         LineData data = new LineData(labels, dataset);
-        lineChart.setData(data); // set the data and list of lables into chart<br />
-
+        lineChart.setData(data);
+        dataset.setDrawFilled(true);
         lineChart.setDescription(" ");
 
     }
