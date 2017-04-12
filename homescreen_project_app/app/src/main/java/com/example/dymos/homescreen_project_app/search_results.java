@@ -50,6 +50,7 @@ public class search_results extends AppCompatActivity {
 
         /**
          * Line Graph
+         *
          */
         LineChart lineChart = (LineChart) findViewById(R.id.LineChart1);
             ArrayList<Entry> entries = new ArrayList<>();
