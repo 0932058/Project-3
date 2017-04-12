@@ -10,7 +10,7 @@ import com.example.dymos.homescreen_project_app.homescreen;
 
 public class select_region extends AppCompatActivity {
 
-    
+
     Button nextBtn;
     Button charloisBtn;
     Button delfshavenBtn;

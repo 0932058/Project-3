@@ -8,10 +8,12 @@ public class selectRegion {
 
     private String region1;
     private String region2;
+    private int year;
 
     public selectRegion() {
-        this.region1 = "";
-        this.region2 = "";
+        region1 = "";
+        region2 = "";
+        year = 0;
     }
 
     public boolean addRegion(String region){
@@ -42,6 +44,18 @@ public class selectRegion {
             region2 = "";
         }
 
+    }
+
+    public boolean addYear(int year){
+        if (this.year == year){
+            this.year = 0;
+            return false;
+        }
+        if(this.year == 0){
+            this.year = year;
+            return true;
+        }
+        return false;
     }
 
 

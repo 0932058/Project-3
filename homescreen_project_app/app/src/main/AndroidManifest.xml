@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".aboutScreen"
             android:parentActivityName=".homescreen">
@@ -24,7 +23,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dymos.homescreen_project_app.homescreen" />
         </activity>
-
         <activity
             android:name=".select_region"
             android:parentActivityName=".homescreen">
@@ -32,7 +30,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dymos.homescreen_project_app.homescreen" />
         </activity>
-
         <activity
             android:name=".select_year"
             android:parentActivityName=".select_region">
@@ -40,15 +37,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dymos.homescreen_project_app.homescreen" />
         </activity>
-
         <activity
             android:name=".search_results"
             android:parentActivityName=".select_year">
             <meta-data
                 android:name="android.support.PARENT_ACTIVTY"
-                android:value="com.example.dymos.homescreen_project_app.homescreen"/>
+                android:value="com.example.dymos.homescreen_project_app.homescreen" />
         </activity>
-
+        <activity android:name=".confirm_selection"></activity>
     </application>
 
 </manifest>
