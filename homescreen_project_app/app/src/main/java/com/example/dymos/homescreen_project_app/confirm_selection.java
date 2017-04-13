@@ -14,6 +14,9 @@ public class confirm_selection extends AppCompatActivity {
     Button confirmBtn;
     TextView region1chosen;
     TextView region2chosen;
+    TextView yearChosen;
+
+    ImageView imageOverview;
     ImageView imageRegion1;
     ImageView imageRegion2;
 
@@ -21,19 +24,26 @@ public class confirm_selection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_selection);
-        /*
 
-
-        region1chosen = (TextView) findViewById(R.id.region1chosenTxt);
+        region1chosen = (TextView) findViewById(R.id.region1ChosenTxt);
         region1chosen.setText(homescreen.selecting.getRegion1());
 
-        region2chosen = (TextView) findViewById(R.id.region2chosenTxt);
+        region2chosen = (TextView) findViewById(R.id.region2ChosenTxt);
         region2chosen.setText(homescreen.selecting.getRegion2());
 
-        imageRegion1 = (ImageView) findViewById(R.id.imageRegion1);
-        imageRegion1.setImageResource(storeView);
+        yearChosen = (TextView) findViewById(R.id.yearChosen);
+        yearChosen.setText((Integer.toString(homescreen.selecting.getYear())));
 
-        */
+        imageOverview = (ImageView) findViewById(R.id.rotterdamImage);
+        imageOverview.setImageResource(R.drawable.rotterdam);
+
+        imageRegion1 = (ImageView) findViewById(R.id.imageRegion1);
+        imageRegion1.setImageResource(homescreen.selecting.getRegion1Image());
+
+        imageRegion2 = (ImageView) findViewById(R.id.imageRegion2);
+        imageRegion2.setImageResource(homescreen.selecting.getRegion2Image());
+
+
         confirmBtn = (Button) findViewById(R.id.confirmBtn);
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override

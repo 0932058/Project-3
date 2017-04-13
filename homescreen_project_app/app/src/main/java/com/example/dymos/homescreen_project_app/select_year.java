@@ -16,6 +16,13 @@ public class select_year extends AppCompatActivity {
     Button Btn2006;
     Button nextBtn;
 
+    private void makeColors(Button button, int year){
+        if(homescreen.selecting.getYear() == year){
+            button.setBackgroundColor(Color.RED);
+            button.setTextColor(Color.WHITE);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +40,7 @@ public class select_year extends AppCompatActivity {
 
         //code for the year button
         Btn2011 = (Button) findViewById(R.id.Btn2011);
+        this.makeColors(Btn2011, 2011);
         Btn2011.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +57,7 @@ public class select_year extends AppCompatActivity {
 
         //code for the year button
         Btn2009 = (Button) findViewById(R.id.Btn2009);
+        this.makeColors(Btn2009, 2009);
         Btn2009.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +74,7 @@ public class select_year extends AppCompatActivity {
 
         //code for the year button
         Btn2008 = (Button) findViewById(R.id.Btn2008);
+        this.makeColors(Btn2008, 2008);
         Btn2008.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,6 +91,7 @@ public class select_year extends AppCompatActivity {
 
         //code for the year button
         Btn2007 = (Button) findViewById(R.id.Btn2007);
+        this.makeColors(Btn2007, 2007);
         Btn2007.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,6 +107,7 @@ public class select_year extends AppCompatActivity {
         });
         //code for the year button
         Btn2006 = (Button) findViewById(R.id.Btn2006);
+        this.makeColors(Btn2006, 2006);
         Btn2006.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
