@@ -2,13 +2,17 @@ package com.example.dymos.homescreen_project_app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.graphics.Color;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 
@@ -17,7 +21,6 @@ import java.util.Random;
 
 public class search_results extends AppCompatActivity {
 
-    BarChart barChart;
     Random rand = new Random();
 
     @Override
@@ -25,21 +28,25 @@ public class search_results extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
-        String value1;
+        createBarChart();
+        createLineChart();
+        createPieChart();
 
+    }
+
+    protected void createBarChart() {
         BarChart barChart = (BarChart) findViewById(R.id.BarGraph1);
 
         ArrayList<BarEntry> barEntries = new ArrayList();
         ArrayList<String> theDates = new ArrayList<>();
 
-        for(int i = 0; i < 4; i++){
+        for (int i = 0; i < 4; i++) {
             float n = rand.nextInt(50);
-            barEntries.add(new BarEntry(n,i));
-            String region = Float.toString(i);
-            if (i == 0){
+            barEntries.add(new BarEntry(n, i));
+            if (i == 0) {
                 theDates.add(homescreen.selecting.getRegion1());
             }
-            if (i == 2){
+            if (i == 2) {
                 theDates.add(homescreen.selecting.getRegion2());
             }
             if (i == 1 || i == 3) {
@@ -47,25 +54,28 @@ public class search_results extends AppCompatActivity {
             }
         }
 
-        BarDataSet barDataSet = new BarDataSet(barEntries,"Laaggeletterdheid per regio");
-        BarData theData = new BarData(theDates,barDataSet);
-        
+        BarDataSet barDataSet = new BarDataSet(barEntries, "Laaggeletterdheid per regio");
+        BarData theData = new BarData(theDates, barDataSet);
 
-        BarDataSet barDataSet2 = new BarDataSet(barEntries, "Criminaliteit in objectieve incidenten");
-        //theData.addDataSet(barDataSet2);
+        int red = Color.rgb(255, 100, 50);
+        int green = Color.rgb(50, 100, 255);
+
+        barDataSet.setColors(new int[] { red, green, red, green });
 
         barChart.setData(theData);
         barChart.setTouchEnabled(true);
         barChart.setDragEnabled(true);
         barChart.setScaleEnabled(true);
         barChart.setDescription(" ");
+    }
 
+    protected void createLineChart() {
         /**
          * Line Graph
          *
          */
         LineChart lineChart = (LineChart) findViewById(R.id.LineChart1);
-            ArrayList<Entry> entries = new ArrayList<>();
+        ArrayList<Entry> entries = new ArrayList<>();
             entries.add(new Entry(4f, 0));
             entries.add(new Entry(8f, 1));
             entries.add(new Entry(6f, 2));
@@ -86,6 +96,39 @@ public class search_results extends AppCompatActivity {
         lineChart.setData(data);
         dataset.setDrawFilled(true);
         lineChart.setDescription(" ");
+    }
 
+    protected void createPieChart(){
+        /**
+         * Pie Chart
+         *
+         */
+        // creating data values
+
+        PieChart pieChart = (PieChart) findViewById(R.id.PieChart1);
+
+        ArrayList<Entry> entries = new ArrayList<>();
+        entries.add(new Entry(4f, 0));
+        entries.add(new Entry(8f, 1));
+        entries.add(new Entry(6f, 2));
+        entries.add(new Entry(12f, 3));
+        entries.add(new Entry(18f, 4));
+        entries.add(new Entry(9f, 5));
+
+        PieDataSet dataset = new PieDataSet(entries, "# of calls");
+
+        // creating labels<br />
+        ArrayList<String> labels = new ArrayList<String>();
+        labels.add("Jan");
+        labels.add("Feb");
+        labels.add("Mar");
+        labels.add("Apr");
+        labels.add("May");
+        labels.add("Jun");
+
+        PieData data = new PieData(labels, dataset); // initialize Piedata
+        pieChart.setData(data); //set data into chart
+
+        pieChart.setDescription("Description");
     }
 }
