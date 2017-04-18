@@ -32,15 +32,27 @@ public class search_results extends AppCompatActivity {
         ArrayList<BarEntry> barEntries = new ArrayList();
         ArrayList<String> theDates = new ArrayList<>();
 
-        for(int i = 0; i < 7; i++){
+        for(int i = 0; i < 4; i++){
             float n = rand.nextInt(50);
             barEntries.add(new BarEntry(n,i));
             String region = Float.toString(i);
-            theDates.add("Regio" + region);
+            if (i == 0){
+                theDates.add(homescreen.selecting.getRegion1());
+            }
+            if (i == 2){
+                theDates.add(homescreen.selecting.getRegion2());
+            }
+            if (i == 1 || i == 3) {
+                theDates.add("");
+            }
         }
 
         BarDataSet barDataSet = new BarDataSet(barEntries,"Laaggeletterdheid per regio");
         BarData theData = new BarData(theDates,barDataSet);
+        
+
+        BarDataSet barDataSet2 = new BarDataSet(barEntries, "Criminaliteit in objectieve incidenten");
+        //theData.addDataSet(barDataSet2);
 
         barChart.setData(theData);
         barChart.setTouchEnabled(true);
