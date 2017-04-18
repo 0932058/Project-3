@@ -15,6 +15,7 @@ public class selectRegion {
     private int region2Image;
 
     private int year;
+    private int year2;
 
     public selectRegion() {
         region1 = "";
@@ -40,6 +41,7 @@ public class selectRegion {
     public int getYear(){
         return year;
     }
+    public int getYear2() { return year2; }
 
     public boolean addRegion(String region, int image){
         if (region1.equals(region) || region2.equals(region)){
@@ -80,8 +82,16 @@ public class selectRegion {
             this.year = 0;
             return false;
         }
+        if (this.year2 == year) {
+            this.year2 = 0;
+            return false;
+        }
         if(this.year == 0){
             this.year = year;
+            return true;
+        }
+        if(this.year2 == 0){
+            this.year2 = year;
             return true;
         }
         return false;

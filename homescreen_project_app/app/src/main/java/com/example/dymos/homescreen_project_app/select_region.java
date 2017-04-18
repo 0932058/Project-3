@@ -103,7 +103,7 @@ public class select_region extends AppCompatActivity {
         prinsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Prins Alexander", (R.drawable.rozenburg))){
+                if (homescreen.selecting.addRegion("Prins Alexander", (R.drawable.prins_alexander))){
                     prinsBtn.setBackgroundColor(Color.RED);
                     prinsBtn.setTextColor(Color.WHITE);
                 }

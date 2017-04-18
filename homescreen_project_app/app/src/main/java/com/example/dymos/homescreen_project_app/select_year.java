@@ -17,7 +17,7 @@ public class select_year extends AppCompatActivity {
     Button nextBtn;
 
     private void makeColors(Button button, int year){
-        if(homescreen.selecting.getYear() == year){
+        if(homescreen.selecting.getYear() == year || homescreen.selecting.getYear2() == year){
             button.setBackgroundColor(Color.RED);
             button.setTextColor(Color.WHITE);
         }

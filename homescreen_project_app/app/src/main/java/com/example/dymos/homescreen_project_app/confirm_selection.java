@@ -14,7 +14,7 @@ public class confirm_selection extends AppCompatActivity {
     Button confirmBtn;
     TextView region1chosen;
     TextView region2chosen;
-    TextView yearChosen;
+    TextView yearsChosen;
 
     ImageView imageOverview;
     ImageView imageRegion1;
@@ -31,8 +31,8 @@ public class confirm_selection extends AppCompatActivity {
         region2chosen = (TextView) findViewById(R.id.region2ChosenTxt);
         region2chosen.setText(homescreen.selecting.getRegion2());
 
-        yearChosen = (TextView) findViewById(R.id.yearChosen);
-        yearChosen.setText((Integer.toString(homescreen.selecting.getYear())));
+        yearsChosen = (TextView) findViewById(R.id.yearChosen);
+        yearsChosen.setText((Integer.toString(homescreen.selecting.getYear()) + " " + Integer.toString(homescreen.selecting.getYear2())));
 
         imageOverview = (ImageView) findViewById(R.id.rotterdamImage);
         imageOverview.setImageResource(R.drawable.rotterdam);
