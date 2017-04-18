@@ -12,7 +12,6 @@ import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Timer;
 
-
 public class homescreen extends AppCompatActivity {
 
     public static selectRegion selecting;
