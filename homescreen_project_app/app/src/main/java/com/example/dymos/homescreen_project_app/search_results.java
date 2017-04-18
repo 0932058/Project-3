@@ -1,6 +1,5 @@
 package com.example.dymos.homescreen_project_app;
 
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -13,7 +12,6 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 
-import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -34,21 +32,15 @@ public class search_results extends AppCompatActivity {
         ArrayList<BarEntry> barEntries = new ArrayList();
         ArrayList<String> theDates = new ArrayList<>();
 
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 7; i++){
             float n = rand.nextInt(50);
             barEntries.add(new BarEntry(n,i));
             String region = Float.toString(i);
-            theDates.add(homescreen.selecting.getRegion1());
+            theDates.add("Regio" + region);
         }
 
-        
-        BarDataSet barDataSet = new BarDataSet(barEntries,"Laaggeletterdheid in %");
-
+        BarDataSet barDataSet = new BarDataSet(barEntries,"Laaggeletterdheid per regio");
         BarData theData = new BarData(theDates,barDataSet);
-
-        BarDataSet barDataSet2 = new BarDataSet(barEntries, "criminaliteit in ");
-        //barDataset2.setColor(Color.RED);
-        //theData.addDataSet();
 
         barChart.setData(theData);
         barChart.setTouchEnabled(true);
