@@ -14,7 +14,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:text="Deze app is gemaakt door de volgende developers: \n\nBirkan Durmaz\nYori Giacolone\nLucas de Graaf\nKees Goedebuure\nOlaf van der Graaf "
+        android:text="Deze app is gemaakt door de volgende developers: \n\nBirkan Durmaz\nYori Giacalone\nLucas de Graaf\nKees Goedebuure\nOlaf van der Graaf "
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
