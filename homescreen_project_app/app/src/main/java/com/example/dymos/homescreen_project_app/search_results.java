@@ -259,6 +259,7 @@ public class search_results extends AppCompatActivity {
             // add dataset values
             region1ds.add(new Entry(crimRegio1Year1, 0));
             region1ds.add(new Entry(crimRegio1Year2, 1));
+
             region2ds.add(new Entry(crimRegio2Year1, 0));
             region2ds.add(new Entry(crimRegio2Year2, 1));
 
