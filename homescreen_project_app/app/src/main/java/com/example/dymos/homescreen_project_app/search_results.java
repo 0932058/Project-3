@@ -16,6 +16,8 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -97,69 +99,49 @@ public class search_results extends AppCompatActivity {
     }
 
     protected void createLineChart(int n) {
-        /**
-         * Line Graph
-         *
-         */
+        int year = homescreen.selecting.getYear();
+        int year2 = homescreen.selecting.getYear2();
+        String label_year = Integer.toString(year);
+        String label_year2 = Integer.toString(year2);
 
         LineChart lineChart = (LineChart) findViewById(R.id.LineChart1);
 
         if(n == 0) {
             lineChart.setVisibility(View.GONE);
         } else {
-            ArrayList<Entry> region1ds = new ArrayList<>(); //dataset region 1
-            ArrayList<Entry> region2ds = new ArrayList<>(); //dataset region 2
-            ArrayList<Integer> colors = new ArrayList<>();
-            ArrayList<String> label = new ArrayList<>();
-            ArrayList<Entry> entries = new ArrayList<>();
-            region1ds.add(new Entry(4f, 0));
-            region1ds.add(new Entry(7f, 0));
+            // set region dataset array
+            ArrayList<Entry> region1ds = new ArrayList<Entry>();
+            ArrayList<Entry> region2ds = new ArrayList<Entry>();
 
+            // add dataset values
+            region1ds.add(new Entry(10f, 0));
+            region1ds.add(new Entry(6f, 1));
             region2ds.add(new Entry(2f, 0));
-            region2ds.add(new Entry(8f, 0));
+            region2ds.add(new Entry(13f, 1));
 
-
-            int red = Color.rgb(255, 100, 50);
-            int green = Color.rgb(50, 100, 255);
-
-            colors.add(red);
-            colors.add(green);
-
-            label.add("placeholder-chan");
-            label.add(":^) €money!!");
-
-            Legend l = lineChart.getLegend();
-            l.setCustom(colors, label);
-
-            String year2;
-            String year;
-            year = Integer.toString(homescreen.selecting.getYear());
-            year2 = Integer.toString(homescreen.selecting.getYear2());
-
-            ArrayList<LineDataSet> datalines = new ArrayList<LineDataSet> ();
-
-            LineDataSet linedata = new LineDataSet(region1ds, "DataSet1");
-            linedata.setColor(Color.RED);
-            linedata.setCircleColor(Color.RED);
-            datalines.add(linedata);
-            datalines.add(new LineDataSet(region2ds, "DataSet2"));
-
-            // Union from xAxisOne and xAxisTwo
-            String[] xAxis = new String[] {year, year};
-
-            //lineChart.setData(xAxis, datalines);
-
+            // add labels to chart
             ArrayList<String> labels = new ArrayList<String>();
-            labels.add(year2);
-            labels.add(year);
+            labels.add(label_year);
+            labels.add(label_year2);
 
-            LineDataSet dataset = new LineDataSet(entries, "Aantal overvallen");
-            LineData data = new LineData(labels, dataset);
-            lineChart.setData(data);
-            dataset.setDrawFilled(true);
-            lineChart.setDescription(" ");
+            // set region dataset into dataset array
+            ArrayList<ILineDataSet> lineDataSets = new ArrayList<>();
+            LineDataSet lineDataSet1 = new LineDataSet(region1ds, homescreen.selecting.getRegion1());
+            LineDataSet lineDataSet2 = new LineDataSet(region2ds, homescreen.selecting.getRegion2());
+
+            // set colors for each region line
+            lineDataSet1.setColor(Color.RED);
+            lineDataSet2.setColor(Color.BLUE);
+
+            lineDataSets.add(lineDataSet1);
+            lineDataSets.add(lineDataSet2);
+
+            // put data into chart
+            lineChart.setData(new LineData(labels, lineDataSets));
+            lineChart.setDescription("Totaal aantal misdaden");
         }
     }
+
 
     protected void createPieChart(){
         /**
@@ -202,16 +184,7 @@ public class search_results extends AppCompatActivity {
 
         dataset.setColors(new int[] { red, green, hotpink, orange, blue });
 
-        // creating labels<br />
-        ArrayList<String> labels = new ArrayList<String>();
-        labels.add("Jan");
-        labels.add("Feb");
-        labels.add("Mar");
-        labels.add("Apr");
-        labels.add("May");
-        labels.add("Jun");
-
-        PieData data = new PieData(labels, dataset); // initialize Piedata
+        PieData data = new PieData(label, dataset); // initialize Piedata
         pieChart.setData(data); //set data into chart
 
         pieChart.setDescription(" ");
