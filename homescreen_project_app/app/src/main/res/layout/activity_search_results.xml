@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dymos.homescreen_project_app.search_results">
+    tools:context="com.example.dymos.homescreen_project_app.search_results"
+    android:background="@android:color/black">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,19 +34,26 @@
             android:layout_height="300dp"
             android:layout_below="@+id/separator1"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="50dp" />
 
         <com.github.mikephil.charting.charts.PieChart
             android:id='@+id/PieChart1'
             android:layout_width='match_parent'
             android:layout_height='300dp'
             android:layout_below="@+id/LineChart1"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="50dp" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id='@+id/PieChart2'
+            android:layout_width='match_parent'
+            android:layout_height='300dp'
+            android:layout_below="@+id/PieChart1"
+            android:layout_marginTop="50dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:layout_below="@+id/PieChart1" />
+            android:layout_below="@+id/PieChart2" />
 
     </RelativeLayout>
 

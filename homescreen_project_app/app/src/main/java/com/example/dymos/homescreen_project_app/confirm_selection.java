@@ -24,6 +24,7 @@ public class confirm_selection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_selection);
+        setTitle("");
 
         region1chosen = (TextView) findViewById(R.id.region1ChosenTxt);
         region1chosen.setText(homescreen.selecting.getRegion1());
@@ -32,7 +33,7 @@ public class confirm_selection extends AppCompatActivity {
         region2chosen.setText(homescreen.selecting.getRegion2());
 
         yearsChosen = (TextView) findViewById(R.id.yearChosen);
-        yearsChosen.setText((Integer.toString(homescreen.selecting.getYear()) + " " + Integer.toString(homescreen.selecting.getYear2())));
+        yearsChosen.setText((Integer.toString(homescreen.selecting.getYear()) + " - " + Integer.toString(homescreen.selecting.getYear2())));
 
         imageOverview = (ImageView) findViewById(R.id.rotterdamImage);
         imageOverview.setImageResource(R.drawable.rotterdam);

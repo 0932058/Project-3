@@ -65,11 +65,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(rozenburgBtn, "Rozenburg");
+        this.makeColors(rozenburgBtn, "rozenburg");
         rozenburgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Rozenburg", (R.drawable.rozenburg))){
+                if (homescreen.selecting.addRegion("rozenburg", (R.drawable.rozenburg))){
                     rozenburgBtn.setBackgroundColor(Color.RED);
                     rozenburgBtn.setTextColor(Color.WHITE);
                 }
@@ -82,11 +82,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(centrumBtn, "Centrum");
+        this.makeColors(centrumBtn, "stadscentrum");
         centrumBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Centrum",(R.drawable.centrum))){
+                if (homescreen.selecting.addRegion("stadscentrum",(R.drawable.centrum))){
                     centrumBtn.setBackgroundColor(Color.RED);
                     centrumBtn.setTextColor(Color.WHITE);
                 }
@@ -99,11 +99,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(prinsBtn, "Prins Alexander");
+        this.makeColors(prinsBtn, "prins_alexander");
         prinsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Prins Alexander", (R.drawable.prins_alexander))){
+                if (homescreen.selecting.addRegion("prins_alexander", (R.drawable.prins_alexander))){
                     prinsBtn.setBackgroundColor(Color.RED);
                     prinsBtn.setTextColor(Color.WHITE);
                 }
@@ -116,11 +116,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(pernisBtn, "Pernis");
+        this.makeColors(pernisBtn, "pernis");
         pernisBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Pernis", (R.drawable.pernis))){
+                if (homescreen.selecting.addRegion("pernis", (R.drawable.pernis))){
                     pernisBtn.setBackgroundColor(Color.RED);
                     pernisBtn.setTextColor(Color.WHITE);
                 }
@@ -133,11 +133,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(OverschieBtn, "Overschie");
+        this.makeColors(OverschieBtn, "overschie");
         OverschieBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Overschie", (R.drawable.overschie))){
+                if (homescreen.selecting.addRegion("overschie", (R.drawable.overschie))){
                     OverschieBtn.setBackgroundColor(Color.RED);
                     OverschieBtn.setTextColor(Color.WHITE);
                 }
@@ -150,11 +150,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(noordBtn, "Noord");
+        this.makeColors(noordBtn, "noord");
         noordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Noord", (R.drawable.noord))){
+                if (homescreen.selecting.addRegion("noord", (R.drawable.noord))){
                     noordBtn.setBackgroundColor(Color.RED);
                     noordBtn.setTextColor(Color.WHITE);
                 }
@@ -167,11 +167,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(kralingenBtn, "Kralingen");
+        this.makeColors(kralingenBtn, "kralingen_crooswijk");
         kralingenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Kralingen", (R.drawable.kralingen_crooswijk))){
+                if (homescreen.selecting.addRegion("kralingen_crooswijk", (R.drawable.kralingen_crooswijk))){
                     kralingenBtn.setBackgroundColor(Color.RED);
                     kralingenBtn.setTextColor(Color.WHITE);
                 }
@@ -184,11 +184,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(ijsselmondeBtn, "IJsselmonde");
+        this.makeColors(ijsselmondeBtn, "ijselmonde");
         ijsselmondeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("IJsselmonde", (R.drawable.ijselmonde))){
+                if (homescreen.selecting.addRegion("ijselmonde", (R.drawable.ijselmonde))){
                     ijsselmondeBtn.setBackgroundColor(Color.RED);
                     ijsselmondeBtn.setTextColor(Color.WHITE);
                 }
@@ -201,11 +201,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(hoekBtn, "Hoek van Holland");
+        this.makeColors(hoekBtn, "hoek_van_holland");
         hoekBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Hoek van Holland", (R.drawable.hoek_van_holland))){
+                if (homescreen.selecting.addRegion("hoek_van_holland", (R.drawable.hoek_van_holland))){
                     hoekBtn.setBackgroundColor(Color.RED);
                     hoekBtn.setTextColor(Color.WHITE);
                 }
@@ -218,11 +218,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(hillegersbergBtn, "Hillegersberg");
+        this.makeColors(hillegersbergBtn, "schiebroek");
         hillegersbergBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Hillegersberg", (R.drawable.hillegersberg_schiebroek))){
+                if (homescreen.selecting.addRegion("schiebroek", (R.drawable.hillegersberg_schiebroek))){
                     hillegersbergBtn.setBackgroundColor(Color.RED);
                     hillegersbergBtn.setTextColor(Color.WHITE);
                 }
@@ -235,11 +235,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(feijenoordBtn, "Feijenoord");
+        this.makeColors(feijenoordBtn, "feijenoord");
         feijenoordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Feijenoord", (R.drawable.feijenoord))){
+                if (homescreen.selecting.addRegion("feijenoord", (R.drawable.feijenoord))){
                     feijenoordBtn.setBackgroundColor(Color.RED);
                     feijenoordBtn.setTextColor(Color.WHITE);
                 }
@@ -252,11 +252,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(delfshavenBtn, "Delfshaven");
+        this.makeColors(delfshavenBtn, "delfshaven");
         delfshavenBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Delfshaven", (R.drawable.delfshaven))){
+                if (homescreen.selecting.addRegion("delfshaven", (R.drawable.delfshaven))){
                     delfshavenBtn.setBackgroundColor(Color.RED);
                     delfshavenBtn.setTextColor(Color.WHITE);
                 }
@@ -270,11 +270,11 @@ public class select_region extends AppCompatActivity {
 
 
         //code for the "hooglviet" button
-        this.makeColors(charloisBtn, "Charlois");
+        this.makeColors(charloisBtn, "charlois");
         charloisBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Charlois", (R.drawable.charlois))){
+                if (homescreen.selecting.addRegion("charlois", (R.drawable.charlois))){
                     charloisBtn.setBackgroundColor(Color.RED);
                     charloisBtn.setTextColor(Color.WHITE);
                 }
@@ -287,11 +287,11 @@ public class select_region extends AppCompatActivity {
         });
 
         //code for the "hooglviet" button
-        this.makeColors(hoogvlietBtn, "Hoogvliet");
+        this.makeColors(hoogvlietBtn, "hoogvliet");
         hoogvlietBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (homescreen.selecting.addRegion("Hoogvliet", (R.drawable.hoogvliet))){
+                if (homescreen.selecting.addRegion("hoogvliet", (R.drawable.hoogvliet))){
                     hoogvlietBtn.setBackgroundColor(Color.RED);
                     hoogvlietBtn.setTextColor(Color.WHITE);
                 }
